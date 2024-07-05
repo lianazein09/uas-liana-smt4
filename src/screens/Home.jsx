@@ -28,7 +28,7 @@ const Data1  =[
 
 const Home = ({navigation}) => {
   return (
-    <View style={styles.container} backgroundColor="black">
+    <View style={styles.container} backgroundColor="blue">
       <Image source={{uri:'https://asset-2.tstatic.net/batam/foto/bank/images/ilustrasi-instagram-resmi-merilis-fitur-darkmode-selamat-datang-di-instagram-dark-mode.jpg'}}
              style={{width:150, height:40}} 
       />
