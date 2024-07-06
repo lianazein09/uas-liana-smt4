@@ -5,10 +5,10 @@ const IconMenu = ({label}) => {
   return (
     <TouchableOpacity style={styles.container}>
       <View>
-        <Image style={styles.box} source={{uri:'https://i.pinimg.com/474x/56/2e/be/562ebed9cd49b9a09baa35eddfe86b00.jpg'}}
+        <Image style={styles.box}
         />
       </View>
-      <Text>{label}</Text>
+      <Text style={{color: 'white'}}>{label}</Text>
     </TouchableOpacity>
   );
 };
@@ -34,3 +34,4 @@ const styles = StyleSheet.create({
     borderColor:'red',
   },
 });
+

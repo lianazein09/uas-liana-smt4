@@ -1,58 +1,84 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  Pressable,
-  StatusBar,
-  Image,
-  SafeAreaView,
-  MaterialCommunityIcons,
-} from 'react-native';
+import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import IconMenu from '../components/IconMenu';
-import { TabActions } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Data = [
-  {id: 1, label: 'Mufida.ryh.'},
-  {id: 2, label: 'meifintl_440'},
-  {id: 3, label: 'nindia.pcc_'},
-  {id: 4, label: 'dianaulfa97'},
-  {id: 5, label: 'amilats_sh'},
-  {id: 6, label: 'susi_rahma'},
+  {
+    id: '01',
+    name: 'Cerita Anda',
+    image: require('../assets/lian.jpg'),
+  },
+  {
+    id: '02',
+    name: 'vinachuaks',
+    image: require('../assets/vina.jpg'),
+  },
+  {
+    id: '03',
+    name: 'dianawakwaw',
+    image: require('../assets/diana.jpg'),
+  },
+  {
+    id: '04',
+    name: 'mimilslebew',
+    image: require('../assets/mimil.jpg'),
+  },
+  {
+    id: '05',
+    name: 'nindicomel',
+    image: require('../assets/nindia.jpg'),
+  },
+  {
+    id: '05',
+    name: 'nindicomel',
+    image: require('../assets/programmer.jpg'),
+  },
 ];
 
-const Home = ({navigation}) => {
+const Home = () => {
+  const Navigation = useNavigation();
   return (
-    <View style={styles.container} backgroundColor="black">
-      <Image source={{uri:'https://asset-2.tstatic.net/batam/foto/bank/images/ilustrasi-instagram-resmi-merilis-fitur-darkmode-selamat-datang-di-instagram-dark-mode.jpg'}}
-             style={{width:150, height:40}} 
-      />
+    <View style={styles.container}>
       <FlatList
+        style={styles.bgd}
+        vertical
         data={Data}
-        renderItem={({item}) => <IconMenu label={item.label} />}
-        vertical={true}
+        renderItem={({item}) => (
+          <Pressable style={styles.List}>
+            <Image
+              source={item.image}
+              style={{
+                width: 75,
+                height: 75,
+                resizeMode: 'center',
+                borderRadius: 50,
+                marginHorizontal: 7,
+                marginVertical: 10,
+              }}
+            />
+            <Text
+              style={{
+                color: 'white',
+                top: -8,
+                marginLeft: 5,
+              }}>
+              {item.name}
+            </Text>
+          </Pressable>
+        )}
       />
     </View>
-
   );
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
-  btn: {
-    margin: 10,
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-    backgroundColor: 'red',
-  },
-  txt: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: 'black',
+  container: {
+    backgroundColor: 'black',
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 5,
+    //padding: 3,
   },
 });

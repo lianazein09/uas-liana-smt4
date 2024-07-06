@@ -12,7 +12,8 @@ import React from 'react';
 import IconMenu from '../components/IconMenu';
 
 const Data = [
-  {id: 1, label: 'Liana Zein grateful'},
+  {id: 1, label: 'Liana Zein grateful',
+  image: require('../assets/lian.jpg'),}
   
 ];
 
