@@ -12,9 +12,7 @@ import React from 'react';
 import IconMenu from '../components/IconMenu';
 
 const Data = [
-  {id: 1, label: 'Liana Zein grateful',
-  image: require('../assets/lian.jpg'),}
-  
+  {id: 1, label: 'Liana Zein grateful', image: require('../assets/lian.jpg')},
 ];
 
 const Profile = ({navigation}) => {
@@ -29,7 +27,7 @@ const Profile = ({navigation}) => {
         style={styles.btn}>
         <Text style={styles.txt}>PROFIL</Text>
       </TouchableOpacity>
-      <Text style={{color:'white'}}>belum ada postingan</Text>
+      <Text style={{color: 'white'}}>belum ada postingan</Text>
     </View>
   );
 };

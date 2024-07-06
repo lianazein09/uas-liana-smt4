@@ -1,12 +1,18 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image, ImageBackgroundBase} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  ImageBackgroundBase,
+} from 'react-native';
 import React from 'react';
 
 const IconMenu = ({label}) => {
   return (
     <TouchableOpacity style={styles.container}>
       <View>
-        <Image style={styles.box}
-        />
+        <Image style={styles.box} />
       </View>
       <Text style={{color: 'white'}}>{label}</Text>
     </TouchableOpacity>
@@ -31,7 +37,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 40,
-    borderColor:'red',
+    borderColor: 'red',
   },
 });
-
