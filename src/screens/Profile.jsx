@@ -21,8 +21,8 @@ const Profile = ({navigation}) => {
         renderItem={({item}) => <IconMenu label={item.label} />}
       />
       <Image source={require('../assets/logo.png')} style={styles.image1} />
-      <Image style={styles.avatar} source={require('../assets/lyn.jpg')} />
-      <Text style={styles.statLabel1}>Liana Zein</Text>
+      <Image style={styles.avatar} source={require('../assets/lian.jpg')} />
+      <Text style={styles.statLabel1}>lianasftzein</Text>
       <View style={styles.stats}>
         <View style={styles.stat}>
           <Text style={styles.statNumber}>0</Text>
@@ -46,7 +46,7 @@ const Profile = ({navigation}) => {
         style={styles.btn}>
         <Text style={styles.txt}>PROFIL</Text>
       </TouchableOpacity>
-      <MaterialCommunityIcons name="plus-box" color="grey" size={40}
+      <MaterialCommunityIcons name="plus-box" color="white" size={40}
       style={styles.btn1}/>
     </ScrollView>
     

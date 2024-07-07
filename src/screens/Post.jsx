@@ -15,13 +15,13 @@ const post = ({navigation}) => {
   return (
     <View backgroundColor="black">
       <TouchableOpacity>
-        <Image source={require('../assets/pp..jpg')} style={styles.image2} />
-        <Text style={{color: 'white'}}>lilycasey</Text>
-        <Image source={require('../assets/lian.jpg')} style={styles.image} />
+        <Image source={require('../assets/ppjuga.jpeg')} style={styles.image2} />
+        <Text style={{color: 'white'}}>raisasalsa</Text>
+        <Image source={require('../assets/pantai.jpg')} style={styles.image} />
         <Image source={require('../assets/ig.png')} style={styles.image3} />
       </TouchableOpacity>
       <Text style={{color: 'white'}}>
-        lilycasey Happiness belongs to those who are gratefull
+        raisasalsa Let us go to beach at afternoon
       </Text>
       <Text style={{color: 'white'}}>
         Disukai oleh justinbieber dan 197.234 lainnya
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   image2: {
     width: 50,
-    height: 50,
+    height: 60,
   },
   image3: {
     width: 200,

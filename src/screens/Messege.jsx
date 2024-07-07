@@ -1,13 +1,13 @@
-import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Image, Pressable, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
 
 const Data = [
   {
     id: '01',
-    name: 'Cerita Anda',
-    image: require('../assets/lian.jpg'),
-    message: 'Dikirim 15j lalu',
+    name: 'lilyzyn',
+    image: require('../assets/lyn.jpg'),
   },
   {
     id: '02',
@@ -36,10 +36,13 @@ const Data = [
   },
 ];
 
+
 const Home = () => {
   const Navigation = useNavigation();
   return (
     <View style={styles.container}>
+    <Image source={require('../assets/logo.png')} style={styles.image1} />
+    <MaterialCommunityIcons name="comment-search" color="black" size={40} backgroundColor="white" />
       <FlatList
         style={styles.bgd}
         vertical
@@ -68,6 +71,7 @@ const Home = () => {
           </Pressable>
         )}
       />
+      
     </View>
   );
 };
@@ -77,9 +81,18 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'black',
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: 'white',
     borderRadius: 5,
     //padding: 3,
+  },
+  image1: {
+    width: 150,
+    height: 50,
+  },
+  txt: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
   },
 });

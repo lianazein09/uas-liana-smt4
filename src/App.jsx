@@ -19,16 +19,16 @@ const MenuTab = () => {
         component={Home}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="home" size={size} color={color} />
+            <MaterialCommunityIcons name="home" size={size} color="black" />
           ),
         }}
       />
       <Tabs.Screen
-        name="profil" 
+        name="profil"
         component={Profile}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="account-box" size={size} color={color} />
+            <MaterialCommunityIcons name="account-box" size={size} color="black" />
           ),
         }}
       />
@@ -37,7 +37,7 @@ const MenuTab = () => {
         component={Messege}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="message" size={size} color={color} />
+            <MaterialCommunityIcons name="message" size={size} color="black" />
           ),
         }}
       />
