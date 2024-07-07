@@ -8,28 +8,28 @@ import {
   StatusBar,
   Image,
   ScrollView,
+  List,
 } from 'react-native';
 import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMenu from '../components/IconMenu';
-
-const Data = [];
 
 const Profile = ({navigation}) => {
   return (
-    <View backgroundColor="black">
+    <ScrollView backgroundColor="black">
       <FlatList
-        data={Data}
         renderItem={({item}) => <IconMenu label={item.label} />}
       />
       <Image source={require('../assets/logo.png')} style={styles.image1} />
       <Image style={styles.avatar} source={require('../assets/lyn.jpg')} />
+      <Text style={styles.statLabel1}>Liana Zein</Text>
       <View style={styles.stats}>
         <View style={styles.stat}>
-          <Text style={styles.statNumber}>2</Text>
+          <Text style={styles.statNumber}>0</Text>
           <Text style={styles.statLabel}>Postingan</Text>
         </View>
         <View style={styles.stat}>
-          <Text style={styles.statNumber}>650</Text>
+          <Text style={styles.statNumber}>27M</Text>
           <Text style={styles.statLabel}>Pengikut</Text>
         </View>
         <View style={styles.stat}>
@@ -46,7 +46,10 @@ const Profile = ({navigation}) => {
         style={styles.btn}>
         <Text style={styles.txt}>PROFIL</Text>
       </TouchableOpacity>
-    </View>
+      <MaterialCommunityIcons name="plus-box" color="grey" size={40}
+      style={styles.btn1}/>
+    </ScrollView>
+    
   );
 };
 
@@ -100,7 +103,11 @@ const styles = StyleSheet.create({
   avatar: {
     width: 90,
     height: 90,
-    borderRadius: 100,
+    padding:50,
+    marginTop:10,
+    marginLeft:130,
+    borderRadius: 900,
+
   },
   image1: {
     width: 200,
@@ -127,4 +134,22 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 150,
   },
+  image11: {
+    width: 100,
+    height: 100,
+  },
+  btn1: {
+    margin: 10,
+    padding: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    marginRight:10,
+  },
+  statLabel1: {
+    color: 'white',
+    fontSize: 16,
+    marginLeft:150,
+    marginTop:10,
+  },  
 });
