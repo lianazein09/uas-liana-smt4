@@ -1,6 +1,15 @@
-import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
 import Fyp from './Fyp';
+import Post from './Post';
 import {useNavigation} from '@react-navigation/native';
 
 const Data = [
@@ -34,7 +43,8 @@ const Data = [
 const Home = () => {
   const Navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <Image source={require('../assets/logo.png')} style={styles.image1} />
       <FlatList
         style={styles.bgd}
         horizontal
@@ -66,7 +76,7 @@ const Home = () => {
       <View>
         <Fyp />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -75,9 +85,13 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'black',
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: 'white',
     borderRadius: 5,
     //padding: 3,
+  },
+  image1: {
+    width: 150,
+    height: 50,
   },
 });

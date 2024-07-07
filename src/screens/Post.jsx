@@ -2,7 +2,6 @@ import {
   FlatList,
   Image,
   Pressable,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -11,28 +10,27 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Post from './Post';
 
-const fyp = ({navigation}) => {
+const post = ({navigation}) => {
   return (
-    <ScrollView backgroundColor="black" style={styles.View}>
+    <View backgroundColor="black">
       <TouchableOpacity>
         <Image source={require('../assets/pp..jpg')} style={styles.image2} />
-        <Text style={{color: 'white'}}>lilyzyn</Text>
-        <Image source={require('../assets/lyn.jpg')} style={styles.image} />
+        <Text style={{color: 'white'}}>lilycasey</Text>
+        <Image source={require('../assets/lian.jpg')} style={styles.image} />
         <Image source={require('../assets/ig.png')} style={styles.image3} />
       </TouchableOpacity>
-      <Text style={{color: 'white'}}>lilyzyn Happiness belongs to those who are gratefull</Text>
-      <Text style={{color: 'white'}}>Disukai oleh justinbieber dan 197.234 lainnya
+      <Text style={{color: 'white'}}>
+        lilycasey Happiness belongs to those who are gratefull
       </Text>
-      <View>
-      <Post />
-      </View>
-    </ScrollView>
+      <Text style={{color: 'white'}}>
+        Disukai oleh justinbieber dan 197.234 lainnya
+      </Text>
+    </View>
   );
 };
 
-export default fyp;
+export default post;
 
 const styles = StyleSheet.create({
   btn: {

@@ -7,6 +7,7 @@ const Data = [
     id: '01',
     name: 'Cerita Anda',
     image: require('../assets/lian.jpg'),
+    message: 'Dikirim 15j lalu',
   },
   {
     id: '02',
@@ -30,7 +31,7 @@ const Data = [
   },
   {
     id: '05',
-    name: 'nindicomel',
+    name: 'alvina',
     image: require('../assets/programmer.jpg'),
   },
 ];
